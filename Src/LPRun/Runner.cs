@@ -20,11 +20,11 @@ namespace LPRun;
 public static class Runner
 {
     private static readonly string[] IgnoredErrorMessages =
-    {
+    [
         "Downloading package",
         "Downloading NuGet package",
         "Restoring package"
-    };
+    ];
 
     private static readonly TimeSpan DefaultTimeout = TimeSpan.FromMinutes(1);
     private static readonly TimeSpan RetryTimeout   = TimeSpan.FromSeconds(3);
@@ -61,7 +61,7 @@ public static class Runner
     /// <exception cref="LPRunException">Keeps the original exception as <see cref="P:System.Exception.InnerException"/>.</exception>
     /// <seealso href="https://www.linqpad.net/lprun.aspx">LINQPad Command-Line and Scripting</seealso>
     public static Result Execute(string linqFile, TimeSpan? waitForExit = null, RetryOnError? retryOnError = null, params string[] commandLineOptions) =>
-        ExecuteAsyncInternal(true, linqFile, waitForExit, retryOnError, commandLineOptions).GetAwaiter().GetResult();
+        ExecuteInternalAsync(true, linqFile, waitForExit, retryOnError, commandLineOptions).GetAwaiter().GetResult();
 
     /// <summary>
     /// Executes LINQPad script using LPRun with optional timeout specified and LPRun command-line options.
@@ -74,9 +74,9 @@ public static class Runner
     /// <exception cref="LPRunException">Keeps the original exception as <see cref="P:System.Exception.InnerException"/>.</exception>
     /// <seealso href="https://www.linqpad.net/lprun.aspx">LINQPad Command-Line and Scripting</seealso>
     public static Task<Result> ExecuteAsync(string linqFile, TimeSpan? waitForExit = null, RetryOnError? retryOnError = null, params string[] commandLineOptions) =>
-        ExecuteAsyncInternal(false, linqFile, waitForExit, retryOnError, commandLineOptions);
+        ExecuteInternalAsync(false, linqFile, waitForExit, retryOnError, commandLineOptions);
 
-    private static Task<Result> ExecuteAsyncInternal(bool asSync, string linqFile, TimeSpan? waitForExit, RetryOnError? retryOnError, params string[] commandLineOptions)
+    private static Task<Result> ExecuteInternalAsync(bool asSync, string linqFile, TimeSpan? waitForExit, RetryOnError? retryOnError, params string[] commandLineOptions)
     {
         return RetryAsync(() => WrapAsync(ExecuteAsyncLocal));
 
@@ -136,7 +136,7 @@ public static class Runner
             process.BeginOutputReadLine();
             process.BeginErrorReadLine();
 
-            var waitForExitMilliseconds = (int)waitForExit?.TotalMilliseconds!;
+            var waitForExitMilliseconds = (int)waitForExit.Value.TotalMilliseconds;
             var completed = await WaitForExitAsync();
 
             process.CancelOutputRead();

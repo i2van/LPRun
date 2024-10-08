@@ -102,7 +102,7 @@ public static class Driver
     /// </code>
     /// </example>
     public static void InstallWithDepsJson(string driverDir, string driverFileName, string testsFolderPath, params string[] files) =>
-        Install(driverDir, files.Concat(new[] { driverFileName, GetDepsJsonRelativePath(driverFileName, testsFolderPath) }).ToArray());
+        Install(driverDir, [..files, driverFileName, GetDepsJsonRelativePath(driverFileName, testsFolderPath)]);
 
     /// <summary>
     /// Installs the LINQPad driver with the driver dependencies JSON and related driver files.
@@ -126,7 +126,7 @@ public static class Driver
     /// </code>
     /// </example>
     public static void InstallWithDepsJson(string driverDir, string driverFileName, Func<string, string> getDepsJsonFileFullPath, params string[] files) =>
-        Install(driverDir, files.Concat(new[] { driverFileName, GetDepsJsonRelativePath(driverFileName, getDepsJsonFileFullPath) }).ToArray());
+        Install(driverDir, [..files, driverFileName, GetDepsJsonRelativePath(driverFileName, getDepsJsonFileFullPath)]);
 
     /// <summary>
     /// Ensures that there is no driver is installed via NuGet. Throws <see cref="LPRunException"/> exception otherwise.
