@@ -3,8 +3,8 @@
 on: [push, pull_request]
 
 env:
-  SLN:  LPRun.sln
-  SLN_CONFIG: Release
+  NAME: LPRun
+  CONFIG: Release
   BIN_POSTFIX: .Bin
   RETENTION_DAYS: 1
 
@@ -17,29 +17,26 @@ jobs:
     # Set up
 
     - name: Setup .NET
-      uses: actions/setup-dotnet@v4.0.0
+      uses: actions/setup-dotnet@v4.0.1
       with:
         dotnet-version: |
           8.0.x
 
     # Check out
 
-    - name: Check out ${{env.SLN}}
-      uses: actions/checkout@v4.1.1
+    - name: Check out ${{env.NAME}}
+      uses: actions/checkout@v4.2.1
 
-    # LPRun
+    # Build
 
-    - name: Restore ${{env.SLN}}
-      run: dotnet restore ${{env.SLN}}
-
-    - name: Build ${{env.SLN}} ${{env.SLN_CONFIG}}
-      run: dotnet build ${{env.SLN}} --configuration ${{env.SLN_CONFIG}} --no-restore -p:GITHUB_ACTIONS=true
+    - name: Build ${{env.NAME}} ${{env.CONFIG}}
+      run: dotnet build ${{env.NAME}}.sln --configuration ${{env.CONFIG}} -p:GITHUB_ACTIONS=true
 
     # Upload artifacts
 
-    - name: Publish LPRun ${{env.SLN_CONFIG}}
-      uses: actions/upload-artifact@v4.3.0
+    - name: Publish ${{env.NAME}} ${{env.CONFIG}}
+      uses: actions/upload-artifact@v4.4.3
       with:
-        name: LPRun${{env.BIN_POSTFIX}}
-        path: bin/${{env.SLN_CONFIG}}/LPRun.*.*nupkg
+        name: ${{env.NAME}}${{env.BIN_POSTFIX}}
+        path: bin/${{env.CONFIG}}/${{env.NAME}}.*.*nupkg
         retention-days: ${{env.RETENTION_DAYS}}
