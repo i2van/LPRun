@@ -13,6 +13,7 @@
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
     <Product>LINQPad Driver LPRun Unit/Integration Tests Runner</Product>
     <AssemblyTitle>LINQPad driver LPRun unit/integration tests runner</AssemblyTitle>
+    <Title>$(Product)</Title>
     <Description>$(AssemblyTitle).</Description>
   </PropertyGroup>
 
