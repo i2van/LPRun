@@ -4,7 +4,7 @@
     <Deterministic>true</Deterministic>
     <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>
-    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <NoWarn>1701;1702;NU5100;NETSDK1138</NoWarn>
     <OutputPath>..\..\bin\$(Configuration)</OutputPath>
   </PropertyGroup>
