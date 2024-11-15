@@ -16,6 +16,9 @@ namespace LPRun;
 /// </summary>
 public static class Context
 {
+    private const int MinVersionSupported = 6;
+    private const int MaxVersionSupported = 9;
+
     private static readonly string BaseDir  = GetDirectoryName(new Uri(Assembly.GetExecutingAssembly().Location).LocalPath)!;
 
     private static readonly string LpRunDir = GetFullPath("LPRun");
@@ -26,7 +29,7 @@ public static class Context
         ThrowNotSupportedFrameworkException(IsNetNative, "Native") ??
         FrameworkInfo.Version.Major switch
         {
-            >= 6 and <= 8 => $"LPRun8-{(IsArm ? "arm" : "x")}{(Is64Bit ? "64" : "86")}.exe",
+            >= MinVersionSupported and <= MaxVersionSupported => $"LPRun8-{(IsArm ? "arm" : "x")}{(Is64Bit ? "64" : "86")}.exe",
             _                  => ThrowNotSupportedNetVersionException()
         };
 
