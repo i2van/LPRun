@@ -17,6 +17,8 @@ namespace LPRun;
 /// </summary>
 public static class ConnectionHeader
 {
+    private static readonly string[] DefaultNamespaces = [ "FluentAssertions" ];
+
     /// <summary>
     /// Gets the LINQPad script connection header.
     /// </summary>
@@ -54,14 +56,14 @@ public static class ConnectionHeader
     </DriverData>
   </Connection>
   <NuGetReference>FluentAssertions</NuGetReference>
-{string.Join(Environment.NewLine, new[] { "FluentAssertions" }.Concat(additionalNamespaces).Select(additionalNamespace => $"  <Namespace>{additionalNamespace}</Namespace>"))}
+{string.Join(Environment.NewLine, DefaultNamespaces.Concat(additionalNamespaces).Select(additionalNamespace => $"  <Namespace>{additionalNamespace}</Namespace>"))}
 </Query>");
 
     private static IEnumerable<(string Key, string Value)> GetKeyValues<T>(T driverConfig)
         where T : notnull
     {
         return driverConfig.GetType().GetProperties()
-            .Where(propertyInfo => propertyInfo.CanRead && propertyInfo.CanWrite)
+            .Where(static propertyInfo => propertyInfo is { CanRead: true, CanWrite: true })
             .Select(propertyInfo => (propertyInfo.Name, ValueToString(propertyInfo)));
 
         string ValueToString(PropertyInfo propertyInfo) =>
