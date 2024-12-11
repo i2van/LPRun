@@ -33,10 +33,10 @@ The LPRun is the LINQPad driver's unit/integration tests runner. Can be used for
 
 .NET versions supported by LPRun are listed below. In case of unsupported version LPRun fallbacks to the latest production .NET installed.
 
-| LPRun   | .NET 9.0 | .NET 8.0 | .NET 7.0 | .NET 6.0 | .NET 5.0 | .NET 3.1 |
-|:-------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|
-|    8    |    ✔️    |    ✔️    |    ✔️    |    ✔️    |          |          |
-|    7    |          |          |    ✔️    |    ✔️    |    ✔️    |    ✔️    |
+| LPRun |      .NET 9.0      |     .NET 8.0       |      .NET 7.0      |      .NET 6.0      |      .NET 5.0      |      .NET 3.1      |
+|:-----:|:------------------:|:------------------:|:------------------:|:------------------:|:------------------:|:------------------:|
+|   8   | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                    |                    |
+|   7   |                    |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 
 Use the following script to check the .NET version used by LPRun:
 
