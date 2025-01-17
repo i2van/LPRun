@@ -9,7 +9,6 @@
 
 * [Description](#description)
 * [LPRun .NET Versions](#lprun-net-versions)
-* [Website](#website)
 * [Download](#download)
 * [Usage](#usage)
   * [Setup](#setup)
@@ -27,7 +26,8 @@
 
 ## Description
 
-The LPRun is the LINQPad driver's unit/integration tests runner. Can be used for testing [LINQPad 8](https://www.linqpad.net/LINQPad8.aspx)/[LINQPad 7](https://www.linqpad.net/LINQPad7.aspx)/[LINQPad 6](https://www.linqpad.net/LINQPad6.aspx) drivers or for running LINQPad scripts.
+The LPRun is the LINQPad driver's unit/integration tests runner. Can be used for testing [LINQPad 8](https://www.linqpad.net/LINQPad8.aspx)/[LINQPad 7](https://www.linqpad.net/LINQPad7.aspx)/[LINQPad 6](https://www.linqpad.net/LINQPad6.aspx) drivers,
+e.g., [CsvLINQPadDriver for LINQPad 8/7/6/5](https://github.com/i2van/CsvLINQPadDriver), or for running LINQPad scripts.
 
 ## LPRun .NET Versions
 
@@ -45,10 +45,6 @@ Use the following script to check the .NET version used by LPRun:
 
 System.Environment.Version
 ```
-
-## Website
-
-The LPRun is used for testing of the [CsvLINQPadDriver for LINQPad 8/7/6/5](https://github.com/i2van/CsvLINQPadDriver).
 
 ## Download
 
