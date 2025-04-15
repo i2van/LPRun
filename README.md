@@ -68,7 +68,7 @@ LPRun # Created by LPRun NuGet.
 
 ### LINQPad Test Script Example
 
-LPRun executes LINQPad test script. Test script uses [Fluent Assertions](https://github.com/fluentassertions/fluentassertions) for assertion checks.
+LPRun executes LINQPad test script. Test script uses [AwesomeAssertions](https://github.com/AwesomeAssertions/AwesomeAssertions) for assertion checks.
 
 [StringComparison.linq](https://github.com/i2van/CsvLINQPadDriver/blob/master/Tests/CsvLINQPadDriverTest/LPRun/Templates/StringComparison.linq) LINQPad test script example:
 
@@ -155,7 +155,7 @@ public class LPRunTests
                 driverProperties,
                 "System.Runtime.CompilerServices");
 
-            // FluentAssertions helper.
+            // AwesomeAssertions helper.
             yield return
                  "string Reason([CallerLineNumber] int sourceLineNumber = 0) =>" +
                 @" $""something went wrong at line #{sourceLineNumber}"";";
@@ -274,7 +274,7 @@ var driverProperties = Mock.Of<IDriverProperties>(props =>
 
 ### NuGet
 
-* [Fluent Assertions](https://github.com/fluentassertions/fluentassertions)
+* [AwesomeAssertions](https://github.com/AwesomeAssertions/AwesomeAssertions)
 * [Moq](https://github.com/moq/moq4)
 * [NUnit](https://github.com/nunit/nunit)
 

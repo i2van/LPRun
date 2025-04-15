@@ -55,7 +55,7 @@ public static class ConnectionHeader
 {string.Join(Environment.NewLine, GetKeyValues(driverConfig).Select(keyValuePair => $"      <{keyValuePair.Key}>{SecurityElement.Escape(keyValuePair.Value)}</{keyValuePair.Key}>"))}
     </DriverData>
   </Connection>
-  <NuGetReference>FluentAssertions</NuGetReference>
+  <NuGetReference>AwesomeAssertions</NuGetReference>
 {string.Join(Environment.NewLine, DefaultNamespaces.Concat(additionalNamespaces).Select(additionalNamespace => $"  <Namespace>{additionalNamespace}</Namespace>"))}
 </Query>");
 
