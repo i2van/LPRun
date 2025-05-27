@@ -17,7 +17,7 @@ namespace LPRun;
 /// </summary>
 public static class ConnectionHeader
 {
-    private static readonly string[] DefaultNamespaces = [ "FluentAssertions" ];
+    private static readonly string[] DefaultNamespaces = [ "AwesomeAssertions" ];
 
     /// <summary>
     /// Gets the LINQPad script connection header.
