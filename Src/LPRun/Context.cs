@@ -17,7 +17,7 @@ namespace LPRun;
 public static class Context
 {
     private const int MinVersionSupported = 6;
-    private const int MaxVersionSupported = 9;
+    private const int MaxVersionSupported = 10;
 
     private static readonly string BaseDir  = GetDirectoryName(new Uri(Assembly.GetExecutingAssembly().Location).LocalPath)!;
 

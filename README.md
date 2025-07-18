@@ -33,10 +33,10 @@ e.g., [CsvLINQPadDriver for LINQPad 8/7/6/5](https://github.com/i2van/CsvLINQPad
 
 .NET versions supported by LPRun are listed below. In case of unsupported version LPRun fallbacks to the latest production .NET installed.
 
-| LPRun |      .NET 9.0      |     .NET 8.0       |      .NET 7.0      |      .NET 6.0      |      .NET 5.0      |      .NET 3.1      |
-|:-----:|:------------------:|:------------------:|:------------------:|:------------------:|:------------------:|:------------------:|
-|   8   | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                    |                    |
-|   7   |                    |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| LPRun |      .NET 10.0     |      .NET 9.0      |     .NET 8.0       |      .NET 7.0      |      .NET 6.0      |      .NET 5.0      |      .NET 3.1      |
+|:-----:|:------------------:|:------------------:|:------------------:|:------------------:|:------------------:|:------------------:|:------------------:|
+|   8   | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                    |                    |
+|   7   |                    |                    |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 
 Use the following script to check the .NET version used by LPRun:
 
