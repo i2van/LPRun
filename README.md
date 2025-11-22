@@ -8,7 +8,7 @@
 ## Table of Contents
 
 * [Description](#description)
-* [NET Versions Supported](#net-versions-supported)
+* [.NET Versions Supported](#net-versions-supported)
 * [Download](#download)
 * [Usage](#usage)
   * [Setup](#setup)
