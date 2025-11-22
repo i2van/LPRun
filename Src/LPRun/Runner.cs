@@ -155,7 +155,7 @@ public static class Runner
             throw new TimeoutException($"LPRun timed out after {waitForExit}");
 
             string GetArguments() =>
-                $@"-fx={FrameworkInfo.Version.Major}.{FrameworkInfo.Version.Minor} ""{GetFullPath(linqFile)}"" {string.Join(" ", commandLineOptions)}";
+                $@"-fx={FrameworkInfo.Version.Major}.{FrameworkInfo.Version.Minor} ""{GetFullPath(linqFile)}"" {string.Join(' ', commandLineOptions)}";
 
             void OutputDataReceivedHandler(object _, DataReceivedEventArgs e) =>
                 output.Append(e.Data);

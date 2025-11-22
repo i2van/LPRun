@@ -42,7 +42,6 @@ public static class Options
         /// </summary>
         /// <remarks>
         /// LPRrun will automatically download the required NuGet packages and dependencies upon first execution.
-        /// This will work whether or not you have a registered edition of LINQPad.
         /// </remarks>
         public const string ForceDownload    = "-nunuget";
     }

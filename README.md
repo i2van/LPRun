@@ -8,7 +8,7 @@
 ## Table of Contents
 
 * [Description](#description)
-* [LPRun .NET Versions](#lprun-net-versions)
+* [NET Versions Supported](#net-versions-supported)
 * [Download](#download)
 * [Usage](#usage)
   * [Setup](#setup)
@@ -26,19 +26,18 @@
 
 ## Description
 
-The LPRun is the LINQPad driver's unit/integration tests runner. Can be used for testing [LINQPad 8](https://www.linqpad.net/LINQPad8.aspx)/[LINQPad 7](https://www.linqpad.net/LINQPad7.aspx)/[LINQPad 6](https://www.linqpad.net/LINQPad6.aspx) drivers,
-e.g., [CsvLINQPadDriver for LINQPad 8/7/6/5](https://github.com/i2van/CsvLINQPadDriver), or for running LINQPad scripts.
+The LPRun is the LINQPad driver's unit/integration tests runner. Can be used for testing [LINQPad](https://www.linqpad.net) drivers,
+e.g., [CsvLINQPadDriver for LINQPad 9/5](https://github.com/i2van/CsvLINQPadDriver), or for running LINQPad scripts.
 
-## LPRun .NET Versions
+## .NET Versions Supported
 
-.NET versions supported by LPRun are listed below. In case of unsupported version LPRun fallbacks to the latest production .NET installed.
+The following .NET versions are supported:
 
-| LPRun |      .NET 10.0     |      .NET 9.0      |     .NET 8.0       |      .NET 7.0      |      .NET 6.0      |      .NET 5.0      |      .NET 3.1      |
-|:-----:|:------------------:|:------------------:|:------------------:|:------------------:|:------------------:|:------------------:|:------------------:|
-|   8   | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                    |                    |
-|   7   |                    |                    |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+- .NET 10.0
+- .NET 9.0
+- .NET 8.0
 
-Use the following script to check the .NET version used by LPRun:
+Use script below to check the .NET version used by LPRun:
 
 ```csharp
 <Query Kind="Expression"/>
@@ -263,13 +262,13 @@ var driverProperties = Mock.Of<IDriverProperties>(props =>
 ## Authors
 
 * [Ivan Ivon](https://github.com/i2van)
-* [LINQPad.Runtime](https://www.linqpad.net/LINQPad8.aspx)/[LPRun](https://www.linqpad.net/lprun.aspx) binaries ([license](https://www.linqpad.net/eula.txt)) by [Joseph Albahari](https://www.albahari.com/)
+* [LINQPad.Runtime](https://www.linqpad.net)/[LPRun](https://www.linqpad.net/lprun.aspx) binaries ([license](https://www.linqpad.net/eula.txt)) by [Joseph Albahari](https://www.albahari.com)
 
 ## Credits
 
 ### Tools
 
-* [LINQPad 8](https://www.linqpad.net/LINQPad8.aspx)
+* [LINQPad](https://www.linqpad.net)
 * [LINQPad Command-Line and Scripting](https://www.linqpad.net/lprun.aspx)
 
 ### NuGet

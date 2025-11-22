@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.1;net6.0;net7.0;net8.0;net9.0</TargetFrameworks>
+    <TargetFrameworks>netstandard2.1;net8.0;net9.0;net10.0</TargetFrameworks>
     <Deterministic>true</Deterministic>
     <LangVersion>preview</LangVersion>
     <Nullable>enable</Nullable>
@@ -43,7 +43,7 @@
   <PropertyGroup>
     <ContentFilesPath>contentFiles\any\any\LPRun\Bin</ContentFilesPath>
     <LPRunRoot>LPRun\Bin\</LPRunRoot>
-    <LPRun>$(LPRunRoot)LPRun8</LPRun>
+    <LPRun>$(LPRunRoot)LPRun9</LPRun>
   </PropertyGroup>
 
   <ItemGroup>

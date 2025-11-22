@@ -14,7 +14,7 @@ using static LPRun.LPRunException;
 namespace LPRun;
 
 /// <summary>
-/// Provides method for for creating the LINQPad script by combining script file content and connection header.
+/// Provides method for creating the LINQPad script by combining script file content and connection header.
 /// </summary>
 public static class LinqScript
 {
@@ -56,7 +56,7 @@ public static class LinqScript
     /// </summary>
     /// <param name="script">The LINQPad script which content will be appended to <paramref name="connection"/> header.</param>
     /// <param name="connection">The LINQPad script connection header created by call to <see cref="ConnectionHeader"/>.<see cref="ConnectionHeader.Get{T}"/> method.</param>
-    /// <param name="scriptFileName">The expected script file name without extension. If <see langword="null" /> or empty the script file name will be generated. Your are in charge of removing that file afterwards.</param>
+    /// <param name="scriptFileName">The expected script file name without extension. If <see langword="null" /> or empty the script file name will be generated. You are in charge of removing that file afterward.</param>
     /// <returns>The path to LINQPad script file created by combining the script <paramref name="script"/> content and the <paramref name="connection"/> header.</returns>
     /// <exception cref="LPRunException">Keeps the original exception as <see cref="P:System.Exception.InnerException"/>.</exception>
     /// <example>
