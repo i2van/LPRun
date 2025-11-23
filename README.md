@@ -27,17 +27,11 @@
 ## Description
 
 The LPRun is the LINQPad driver's unit/integration tests runner. Can be used for testing [LINQPad](https://www.linqpad.net) drivers,
-e.g., [CsvLINQPadDriver for LINQPad 9/5](https://github.com/i2van/CsvLINQPadDriver), or for running LINQPad scripts.
+e.g., [CsvLINQPadDriver for LINQPad](https://github.com/i2van/CsvLINQPadDriver), or for running LINQPad scripts.
 
 ## .NET Versions Supported
 
-The following .NET versions are supported:
-
-- .NET 10.0
-- .NET 9.0
-- .NET 8.0
-
-Use script below to check the .NET version used by LPRun:
+Scripts targeting `.NET 6` up to `.NET 10` are supported. Use the following LINQPad script to check which .NET is used by LPRun:
 
 ```csharp
 <Query Kind="Expression"/>
