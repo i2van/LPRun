@@ -16,6 +16,7 @@
   * [NUnit Test Example](#nunit-test-example)
 * [Known Issues](#known-issues)
   * [Unit-testing Frameworks Support](#unit-testing-frameworks-support)
+  * [macOS support](#macos-support)
   * [LINQPad Runtime Reference](#linqpad-runtime-reference)
 * [Troubleshooting](#troubleshooting)
 * [Authors](#authors)
@@ -224,6 +225,10 @@ public class LPRunTests
 ### Unit-testing Frameworks Support
 
 Tested with [NUnit](https://github.com/nunit/nunit). Other test frameworks should work as well.
+
+### macOS support
+
+Running LPRun on macOS is [not supported](https://github.com/i2van/LPRun/issues/1#issuecomment-3653679537) yet.
 
 ### LINQPad Runtime Reference
 
