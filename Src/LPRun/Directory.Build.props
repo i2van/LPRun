@@ -1,6 +1,6 @@
 ﻿<Project>
   <PropertyGroup>
-    <Version>9.6.4</Version>
+    <Version>9.6.6</Version>
     <PackageReleaseNotes>LPRun $(Version.Split("-")[0])</PackageReleaseNotes>
   </PropertyGroup>
 </Project>
