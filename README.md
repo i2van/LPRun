@@ -32,7 +32,7 @@ e.g., [CsvLINQPadDriver for LINQPad](https://github.com/i2van/CsvLINQPadDriver),
 
 ## .NET Versions Supported
 
-Scripts targeting `.NET 6` up to `.NET 10` are supported. Use the following LINQPad script to check which .NET is used by LPRun:
+Scripts targeting `.NET 8` up to `.NET 11` are supported. Use the following LINQPad script to check which .NET is used by LPRun:
 
 ```csharp
 <Query Kind="Expression"/>
