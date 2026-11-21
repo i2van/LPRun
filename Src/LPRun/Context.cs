@@ -32,7 +32,7 @@ public static class Context
         FrameworkInfo.Version.Major switch
         {
             >= MinVersionSupported and <= MaxVersionSupported => $"{LPRun}-{(IsArm ? "arm" : "x")}{(Is64Bit ? "64" : "86")}.exe",
-            _                  => ThrowNotSupportedNetVersionException()
+            _ => ThrowNotSupportedNetVersionException()
         };
 
     private static string? ThrowNotSupportedFrameworkException(bool isNotSupported, string platform) =>
